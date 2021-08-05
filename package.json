@@ -30,7 +30,7 @@
     "prettier-fix": "prettier --write .",
     "prettier-check": "prettier --check .",
     "eslint-fix": "eslint --fix .",
-    "eslint": "eslint ."
+    "eslint-check": "eslint ."
   },
   "browserslist": {
     "production": [
