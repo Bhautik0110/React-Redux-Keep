@@ -1,0 +1,31 @@
+
+.keep:hover #delete {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.keep .text {
+    white-space: pre-wrap;       /* Since CSS 2.1 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
+.keep {
+    animation: view 150ms linear;
+}
+.keep+.keep {
+    animation-delay: 50ms;
+}
+
+@keyframes view {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
