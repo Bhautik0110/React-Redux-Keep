@@ -4,6 +4,7 @@
     "es2021": true
   },
   "extends": ["plugin:react/recommended", "google", "prettier"],
+  "ignorePatterns": ["node_modules/", "build/"],
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true

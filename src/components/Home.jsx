@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, Suspense } from 'react';
 import Header from './Header';
 import Modal from './Modal';
-import Keeps from './Keeps';
 import { keep } from '../selector';
 import { useSelector } from 'react-redux';
 
 export function Home() {
+  const Keeps = React.lazy(() => import('./Keeps'));
   const [headerTitle] = useState('Keep.');
   const data = useSelector(keep);
 
@@ -13,7 +13,9 @@ export function Home() {
     <div className="container mx-auto p-3">
       {data.hasOpenModal && <Modal />}
       <Header title={headerTitle} />
-      <Keeps />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Keeps />
+      </Suspense>
     </div>
   );
 }
