@@ -3,14 +3,14 @@ module.exports = {
   darkMode: 'media', // or 'media' or 'class'
   theme: {
     container: {
-      center: true
+      center: true,
     },
     extend: {},
   },
   variants: {
     extend: {
-      opacity: ['disabled']
+      opacity: ['disabled'],
     },
   },
   plugins: [],
-}
+};

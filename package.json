@@ -12,14 +12,25 @@
   },
   "devDependencies": {
     "autoprefixer": "^9.8.6",
+    "eslint": "^7.32.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-react": "^7.24.0",
+    "husky": "^7.0.1",
     "postcss": "^7.0.36",
+    "prettier": "2.3.2",
+    "react-docgen": "^5.4.0",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.7"
   },
   "scripts": {
     "start": "craco start",
     "build": "craco build",
     "test": "craco test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prettier-fix": "prettier --write .",
+    "prettier-check": "prettier --check .",
+    "eslint-fix": "eslint --fix .",
+    "eslint": "eslint ."
   },
   "browserslist": {
     "production": [
