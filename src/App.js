@@ -1,16 +1,15 @@
-import React, { Component, Suspense } from "react";
+import React, { Suspense } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-class App extends Component {
-  constructor(props) {
-    super(props);
-  }
+import LocalContext from "./LocalContext";
+import { useSelector } from "react-redux";
 
-  render() {
-    const Home = React.lazy(() => import("./components/Home"));
-    const Contributors = React.lazy(() => import("./components/Contributors"));
-
-    return (
-      <React.StrictMode>
+export default function App() {
+  const locale = useSelector((state) => state.keep.locale);
+  const Home = React.lazy(() => import("./components/Home"));
+  const Contributors = React.lazy(() => import("./components/Contributors"));
+  return (
+    <React.StrictMode>
+      <LocalContext.Provider value={locale}>
         <BrowserRouter>
           <Switch>
             <Route path="/contributors">
@@ -25,9 +24,7 @@ class App extends Component {
             </Route>
           </Switch>
         </BrowserRouter>
-      </React.StrictMode>
-    );
-  }
+      </LocalContext.Provider>
+    </React.StrictMode>
+  );
 }
-
-export default App;
