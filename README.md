@@ -16,6 +16,13 @@ Make sure `Node`, and `NPM` installed on your machine.
 - `components/styles/` contains all css files.
 - `components/` contains all components.
 
+### What included?
+- React Hooks
+- Redux
+- React Routers (Lazy Loading)
+- React Context
+- TailwindCSS
+
 ### Other tools
 
 - TailwindCSS (https://tailwindcss.com/docs).
