@@ -1,8 +1,8 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import './styles/shared.css';
-import { useDispatch } from 'react-redux';
-import { deleteFromKeep } from './keepSlice';
+import React from "react";
+import PropTypes from "prop-types";
+import "./styles/shared.css";
+import { useDispatch } from "react-redux";
+import { deleteFromKeep } from "./keepSlice";
 
 export default function Keep(props) {
   const dispatch = useDispatch();

@@ -20,3 +20,4 @@ Make sure `Node`, and `NPM` installed on your machine.
 
 - TailwindCSS (https://tailwindcss.com/docs).
 - Redux (https://redux.js.org/introduction/getting-started).
+- React Router(https://reactrouter.com/web/example/basic).

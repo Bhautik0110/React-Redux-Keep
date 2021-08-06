@@ -1,6 +1,6 @@
 module.exports = {
-  purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
-  darkMode: 'media', // or 'media' or 'class'
+  purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
+  darkMode: "media", // or 'media' or 'class'
   theme: {
     container: {
       center: true,
@@ -9,7 +9,7 @@ module.exports = {
   },
   variants: {
     extend: {
-      opacity: ['disabled'],
+      opacity: ["disabled"],
     },
   },
   plugins: [],
