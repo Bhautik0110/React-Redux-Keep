@@ -12,7 +12,7 @@ export default function Header(props) {
     <header className="w-full">
       <div>
         <div className="w-full justify-between flex items-center">
-          <h1 className="font-sans text-xl text-green-600 font-bold">
+          <h1 className="font-sans text-xl text-green-600 font-bold dark:text-green-400">
             {props.title}
           </h1>
           {location.pathname === "/" && (

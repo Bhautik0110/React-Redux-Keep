@@ -10,7 +10,7 @@ export function Home() {
   const data = useSelector(keep);
 
   return (
-    <div className="container mx-auto p-3">
+    <div className="container mx-auto p-3 dark:bg-gray-600">
       {data.hasOpenModal && <Modal />}
       <Header title={headerTitle} />
       <Suspense fallback={<div>Loading...</div>}>
