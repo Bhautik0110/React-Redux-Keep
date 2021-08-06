@@ -1,11 +1,19 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useDispatch } from "react-redux";
+import LocalContext from "../LocalContext";
 import { modal, addToKeep } from "./keepSlice";
+
+function getPlaceholderByLanguage(language) {
+  return language === "ENGLISH"
+    ? "Please Remember!!\nThis ...\nThat ..."
+    : "યાદ રાખો ...\nઆ ...\nકે ...";
+}
 
 function Modal(props) {
   const dispatch = useDispatch();
-  const [placeholder] = useState("Please Remember!!\nThis ...\nThat ...");
   const [data, setData] = useState("");
+  const locale = useContext(LocalContext);
+
   return (
     <div
       className="fixed z-10 inset-0 overflow-y-auto"
@@ -35,7 +43,7 @@ function Modal(props) {
                 cols="30"
                 rows="10"
                 className="w-full  px-4 pt-5 pb-4 sm:p-6 sm:pb-4 bg-gray-100  dark:bg-gray-600 dark:text-white"
-                placeholder={placeholder}
+                placeholder={getPlaceholderByLanguage(locale)}
               ></textarea>
             </div>
           </div>
@@ -48,14 +56,14 @@ function Modal(props) {
                 data.toString().length <= 0 || data.toString().length > 5000
               }
             >
-              Save
+              {locale === "ENGLISH" ? "Save" : "સાચવો"}
             </button>
             <button
               onClick={(e) => dispatch(modal())}
               type="button"
               className="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm dark:bg-gray-500 dark:text-white"
             >
-              Cancel
+              {locale === "ENGLISH" ? "Cancel" : "રદ કરો"}
             </button>
           </div>
         </div>
