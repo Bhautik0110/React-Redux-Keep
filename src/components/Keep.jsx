@@ -7,8 +7,8 @@ import { deleteFromKeep } from "./keepSlice";
 export default function Keep(props) {
   const dispatch = useDispatch();
   return (
-    <div className="w-full p-4 shadow-md mt-4 rounded-md relative hover:bg-gray-100 keep">
-      <pre className="font-sans break-words whitespace-pre text">
+    <div className="w-full p-4 shadow-md mt-4 rounded-md relative hover:bg-gray-100 keep dark:bg-gray-500 ">
+      <pre className="font-sans break-words whitespace-pre text dark:text-white hover:text-black">
         {props.data}
       </pre>
       <button
