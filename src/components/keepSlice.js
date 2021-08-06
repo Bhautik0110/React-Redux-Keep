@@ -12,6 +12,14 @@ function initKeep() {
   }
 }
 
+// async function demo() {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve()
+//     }, 5000);
+//   })
+// }
+
 const keepSlice = createSlice({
   name: "keep",
   initialState: {
@@ -27,6 +35,7 @@ const keepSlice = createSlice({
     deleteFromKeep: (state, action) => {
       state.data.splice(action.payload, 1);
       localStorage.setItem("keeps", state.data.toString());
+      // await demo();
     },
     modal: (state) => {
       state.hasOpenModal = !state.hasOpenModal;
